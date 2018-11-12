@@ -1,0 +1,58 @@
+(EXPORT GLOBAL VARS AT THE END OF THIS FILE)
+TODO:
+- Check why ale doesn't wanna link my ruby files
+
+Terminal (fzf)
+bundle open whatever_gem 	open gems
+<C-x><C-e>	Go into nvim to send commands to the terminal (need export VISUAL='nvim')
+git diff (any command) | less	output in a different view, press q to quit
+CTRL-T Paste the selected files and directories onto the command line
+CTRL-R - Paste the selected command from history onto the command line
+ALT-C - cd into the selected directory
+nvim & CTRL-T - open a file with nvim using fzf
+
+
+(im) = insert mode
+(tm) = terminal mode
+(nm) = normal mode
+(vm) = visual mode
+vim general:
+CHECK CTAGS, SO NICE TO JUMP TO METHODS AND CLASS (C-b custom map atm)
+F5 (custom map)		jump to class name file even in gems
+viwp	replace current word with paste
+<C-o> jump back to where you were, even if you close vim!! NICE
+gf	find where method is defined (SO USEFUL!!)
+bd	close current buffer
+gf	open file from a require in ruby (and other things?)
+[m	next method (AT BEGINNING)
+]m	previous method (AT BEGINNING)
+[M	previous method (AT END)
+%	jump between opposite char (def/end, (), [], class/end etc..) USEFUl, can select whole methods (V%) etc with this or simply find what an 'end' of is
+var	select ruby block (Class, methods modules etc)
+  ar	select around ruby block can repeat
+  ir	select inside ruby block can repeat
+  m = method    M = class/module    r = any ruby block
+  can use any other operators like d, y, c (not only v)
+:term htop, then f3 3000 and f9 to kill rails process
+(im) <C-r>0	paste register number 0
+(tm) <A-r>0	paste register number 0
+gcc	comment
+cs"'	change surround (quotes in this exemple)
+:FZF / :FZF!	open fuzzy file fiding in current directory *GREAT*
+~	swap case
+gu	make lowercase
+gu	make uppercase
+!	filter to external program
+=	indent
+
+install neovim on debian :
+  wget --quiet https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage --output-document nvim
+  chmod +x nvim
+  sudo chown root:root nvim
+  sudo mv nvim /usr/bin
+  cd ~
+  mkdir -p .config/nvim
+
+
+export VISUAL="nvim"
+export EDITOR="$VISUAL"
