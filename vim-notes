@@ -1,4 +1,6 @@
 (EXPORT GLOBAL VARS AT THE END OF THIS FILE)
+to make vim-session work with terminal, add a '!' to bdelete in https://github.com/xolox/vim-session/blob/master/autoload/xolox/session.vim
+
 TODO:
 - Check why ale doesn't wanna link my ruby files
 
@@ -17,6 +19,9 @@ nvim & CTRL-T - open a file with nvim using fzf
 (nm) = normal mode
 (vm) = visual mode
 vim general:
+:OpenSession name     open a session using the plugin vim-session
+:SaveSession name     save a session using the plugin vim-session
+:qa                   quit all
 CHECK CTAGS, SO NICE TO JUMP TO METHODS AND CLASS (C-b custom map atm)
 F5 (custom map)		jump to class name file even in gems
 viwp	replace current word with paste

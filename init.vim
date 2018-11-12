@@ -21,11 +21,14 @@ set expandtab
 "set winminheight=0
 "set mouse=a
 
+" Return to normal mode in terminal
 tnoremap <Esc> <C-\><C-n>
+
 tnoremap <expr> <A-r> '<C-\><C-n>"'.nr2char(getchar()).'pi'
 nnoremap <F3> :botright new \| terminal<CR> \|i
 nnoremap <F4> :botright new \| terminal<CR> \|ihtop<CR>
-nnoremap <F5> guiW :s/::/\//g<CR><C-o>:noh<CR>gf
+
+"Navigate tags (Class names, methods etc)
 nnoremap <C-b> <C-]>
 
 tnoremap <C-h> <C-\><C-N><C-w>h
@@ -41,6 +44,8 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <esc> :noh<return><esc>
+
+let g:session_autosave = 'yes'
 
 packadd minpac
 call minpac#init()
@@ -60,6 +65,8 @@ call minpac#add('tpope/vim-rbenv')
 call minpac#add('tpope/vim-surround')
 call minpac#add('nelstrom/vim-textobj-rubyblock')
 call minpac#add('kana/vim-textobj-user')
+call minpac#add('xolox/vim-session')
+call minpac#add('xolox/vim-misc')
 
 runtime macros/matchit.vim
 if has("autocmd")
